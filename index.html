@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+  <script src="./assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tora2">
+  <meta name="generator" content="Hugo 0.115.4">
+  <title>Tora2</title>
+
+  <link rel="icon" href="./assets/images/logo.svg" type="image/x-icon">
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fontsource/inter@5.0.16/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/plus-jakarta-sans@5/index.css">
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .text-highlight {
+      color: #e06766;
+    }
+
+    .hover-text {
+      color: black;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      height: 150px;
+      overflow-y: auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .hover-text {
+        height: 80px;
+        /* 更小屏幕的高度 */
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hover-text {
+        height: 60px;
+        /* 更小屏幕的高度 */
+        font-size: 8px;
+      }
+    }
+
+    /* 隐藏滚动条 */
+    .hover-text::-webkit-scrollbar {
+      width: 0;
+      /* 隐藏滚动条 */
+      background: transparent;
+      /* 滚动条背景透明 */
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="./assets/cover.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body class="text-center bg-dark text-light">
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="justify-content: center;">
+    <!-- <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div> -->
+    <div class="navbar-menu is-active has-background-dark has-text-light">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item has-background-dark has-text-light" href="https://github.com/alibaba/Tora">
+          <span class="icon">
+            <svg class="svg-inline--fa fa-home fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+              <path fill="currentColor"
+                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+              </path>
+            </svg><!-- <i class="fas fa-home"></i> Font Awesome fontawesome.com -->
+          </span>
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link has-background-dark has-text-light">
+            More Research
+          </a>
+          <div class="navbar-dropdown has-background-dark has-text-light">
+            <a class="navbar-item has-background-dark has-text-light" href="https://ali-videoai.github.io/tora_video/">
+              Tora
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <section class="text-center container min-vh-100">
+
+      <div class="row py-5">
+        <div class="bg-video" id="bgvideocontainer">
+          <div class="vimeo_player_wrapper"
+            style="position: absolute; z-index: 0; width: 100%; height: 100%; left: 0px; top: 0px; opacity: 0.5;"
+            data-vimeo-initialized="true">
+            <div class="video-wrapper">
+              <img id="bgvideo" muted autoplay="autoplay" loop="loop" src="./assets/images/bg.webp"
+                style="width: auto; height: 100%; max-width: none; object-fit: cover;"></img>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto" style="margin-top: 16%; filter: saturate(1); opacity: 0.90;">
+          <h1 class="display-2 fw-bold title has-text-light">
+            <span style="color: #cfc42f;">T</span><span style="color: #b06d51;">o</span><span
+              style="color: #66b5e0;">r</span><span style="color: #6bf7cb;">a</span><span
+              style="color: #fb919a;">2</span>:
+            <span class="display-4">Motion and Appearance Customized Diffusion Transformer for Multi-Entity Video
+              Generation</span>
+          </h1>
+          <h2>ACM MM25</h2>
+          <p class="author-list">
+            Zhenghao Zhang&emsp;
+            <a href='https://liaojc.netlify.app' target='_blank'>Junchao Liao</a>&emsp;
+            <a href="https://orcid.org/0009-0001-6224-7979" target="_blank">Xiangyu Meng</a>&emsp;
+            Long Qin&emsp;
+            Weizhi Wang
+          </p>
+          <p class="institution-list">
+            Alibaba Group
+          </p>
+          <p>
+
+            <a href="https://arxiv.org/abs/2507.05963" class="btn btn-outline-light" target="_blank">
+              arXiv
+            </a>
+            <!-- <a href="https://github.com" class="btn btn-outline-light" target="_blank">
+              Github
+            </a> -->
+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-body-tertiary text-body">
+      <div class="container col-lg-7 mx-auto">
+        </br>
+        <!-- landscape screen -->
+        <!--            phone      pad            computer     span -->
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-3">
+          <div class="col" data-item>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay playsinline preload="none" loop
+                width="100%">
+                <source src="./assets/videos/f1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      </br>
+
+    </div>
+
+    <div class="album py-5 bg-body-tertiary text-body">
+      <div class="container col-lg-5 mx-auto">
+        <h1>Abstract</h1>
+        </br>
+        <p style="text-align: justify;">
+          Recent advances in diffusion transformer models for motion-guided video generation, such as Tora, have shown
+          significant progress. In this paper, we present Tora2, an enhanced version of Tora, which introduces several
+          design improvements to expand its capabilities in both appearance and motion customization. Specifically, we
+          introduce a decoupled personalization extractor that generates comprehensive personalization embeddings for
+          multiple open-set entities, better preserving fine-grained visual details compared to previous methods.
+          Building on this, we design a gated self-attention mechanism to integrate trajectory, textual description, and
+          visual information for each entity. This innovation significantly reduces misalignment in multimodal
+          conditioning during training. Moreover, we introduce a contrastive loss that jointly optimizes trajectory
+          dynamics and entity consistency through explicit mapping between motion and personalization embeddings. Tora2
+          is, to our best knowledge, the first method to achieve simultaneous multi-entity customization of appearance
+          and motion for video generation. Experimental results demonstrate that Tora2 achieves competitive performance
+          with state-of-the-art customization methods while providing advanced motion control capabilities, which marks
+          a critical advancement in multi-condition video generation.
+        </p>
+      </div>
+    </div>
+
+    <div class="album py-5 bg-body-tertiary text-body">
+      <div class="container col-lg-7 mx-auto">
+        <h1>Pipeline</h1>
+        </br>
+        <p style="text-align: justify">
+          </br>
+          An overview of Tora2, which consists of a decoupled personalization extractor (DPE), a trajectory extractor, a
+          video diffusion transformer, and a gated self-attention mechanism for entity binding.
+          The DPE generates personalization embeddings by combining high-frequency detail information extracted via a
+          decoupled strategy for both human and non-human objects with the low-frequency semantic features obtained from
+          DINOv2. The trajectory extractor encodes provided trajectories into motion embeddings, which are bound to
+          visual entities using a gated self-attention mechanism. These bound motion and personalization conditions are
+          then fed into the video diffusion transformer, employing a motion-guidance fuser and an additional
+          cross-attention layer to achieve both motion and appearance customization for multi entities.
+        </p>
+        <img src="./assets/images/pipeline.svg" style="width: 100%; background-color: rgb(248, 248, 248) !important;">
+      </div>
+    </div>
+
+    <div class="album py-5 bg-body-tertiary text-body">
+      </br></br>
+      <div class="container col-lg-7 mx-auto">
+        <h1>Comparison</h1>
+        </br>
+        <!-- landscape screen -->
+        <!--            phone      pad            computer     span -->
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-3">
+          <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="video-container"> -->
+          <div class="col" data-item>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay playsinline preload="none" loop
+                width="100%">
+                <source src="./assets/videos/f3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hover-text">
+                  <div class="card-body">
+                    <h7 class="card-title">A close-up shot reveals two roses, one in vibrant purple and the other in sunny yellow, swaying gently in unison against the backdrop of a snow-covered mountain range. The video meticulously highlights the striking contrast between the vivid colors of the roses and the pristine whiteness of the mountains. The delicate movements of the roses are captured with precision, enhancing the visual harmony and captivating the viewer with the interplay of color and nature. The scene remains free of additional text or objects, focusing solely on the enchanting beauty of the roses amidst the majestic mountain landscape.</br></br></br></br></h7>
+                  </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="text-center mt-3">
+            <button class="btn btn-outline-dark" id="loadMoreBtn">Load More</button>
+        </div> -->
+      </div>
+      </br>
+
+    </div>
+
+    <div class="album py-5 bg-body-tertiary text-body">
+      <div class="container col-lg-7 mx-auto">
+        <h1>BibTeX</h1>
+        </br>
+        <pre class="bibtex text-light" style="background-color: #545c65;">
+@misc{zhang2025tora2motionappearancecustomized,
+      title={Tora2: Motion and Appearance Customized Diffusion Transformer for Multi-Entity Video Generation}, 
+      author={Zhenghao Zhang and Junchao Liao and Xiangyu Meng and Long Qin and Weizhi Wang},
+      year={2025},
+      eprint={2507.05963},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2507.05963}, 
+}</pre>
+      </div>
+    </div>
+
+
+  </main>
+
+  <style>
+    .bibtex-wrapper {
+      display: flex;
+      justify-content: center;
+      /* 确保整个容器居中 */
+      margin: 20px 0;
+    }
+
+    .bibtex {
+      background-color: #35917295;
+      /* border-left: 4px solid #ccc; */
+      padding: 30px;
+      white-space: pre;
+      font-family: "Menlo", "Consolas", "Courier New", Courier, monospace;
+      text-align: left;
+      /* 确保文本左对齐 */
+    }
+
+    .bibtex-container {
+      text-align: center;
+      /* 确保内容整体居中 */
+    }
+
+    .bibtex-container pre {
+      margin: 0;
+      /* 如果需要，可以移除 pre 的默认边距 */
+      display: inline-block;
+      /* 使 <pre> 行内块显示 */
+    }
+
+    .title {
+      text-align: center;
+    }
+  </style>
+  <!-- <style>
+  .hover-text {
+    font
+  }
+</style> -->
+  <script>
+    $(document).ready(function () {
+      $('#loadMoreBtn').click(function () {
+        const hiddenItems = $('[data-item]:hidden');
+        hiddenItems.slice(0, 6).fadeIn(); // Adjust this number to show more or fewer items
+
+        // Optionally hide the "Load More" button if there are no more hidden items
+        if (hiddenItems.length <= 6) {
+          $('#loadMoreBtn').fadeOut();
+        }
+      });
+    });
+  </script>
+
+
+  <script>
+    // Function to shuffle an array randomly
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    // Get all the video elements and shuffle their order
+    const videoContainer = document.getElementById('video-container');
+    const videoElements = Array.from(videoContainer.querySelectorAll('.col[data-item]'));
+    // shuffleArray(videoElements);
+
+    // Append the shuffled video elements back to the container
+    videoElements.forEach((element) => {
+      videoContainer.appendChild(element);
+    });
+  </script>
+
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
